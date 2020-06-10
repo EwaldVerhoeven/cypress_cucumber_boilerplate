@@ -1,0 +1,19 @@
+{
+  "baseUrl": "https://google.nl",
+  "fileServerFolder": ".",
+  "fixturesFolder": "src/fixtures",
+  "integrationFolder": "src/integration",
+  "pluginsFile": "src/plugins/index",
+  "ignoreTestFiles":"**/exampleFeatures/*.feature",
+  "testFiles": "**/*.feature",
+  "supportFile": "src/support/index.js",
+  "video": false,
+  "videosFolder": "reporting/cypress/e2e/videos",
+  "screenshotsFolder": "reporting/cypress/e2e/screenshots",
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 20000,
+  "env": {
+    "username":"invalide@email.com",
+    "PlaceHolderAPI":"https://jsonplaceholder.typicode.com"
+  }
+}

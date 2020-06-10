@@ -1,0 +1,30 @@
+{
+  "name": "cypress-boilerplate",
+  "version": "1.0.0",
+  "scripts": {
+    "eslint": "eslint src",
+    "testrunner": "./node_modules/.bin/cypress open",
+    "headless:spec": "cypress run --browser chrome --headless --spec projects/icm-client/e2e/src/integration/demo.feature",
+    "non-headless:spec": "cypress run --browser chrome --spec projects/icm-client/e2e/src/integration/demo.feature",
+    "headless:all": "cypress run --browser chrome -- headless",
+    "e2e:report": "node report.config.js"
+  },
+  "devDependencies": {
+    "cypress": "^4.5",
+    "cypress-cucumber-preprocessor": "^2.3.0",
+    "cypress-xpath": "^1.4.0",
+    "eslint": "^7.0.0",
+    "eslint-plugin-cucumber": "^1.4.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "multiple-cucumber-html-reporter": "^1.13.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "src/integration/step_definitions",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "reporting/cypress/e2e/cucumber-json/",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
